@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    {% include 'links.html' %}
+    <link rel="stylesheet" href="/static/css/blog.css">
+</head>
+<body>
+<div id="outer">
+    <div id="inner_default" >
+        <script src="/static/js/redirects.js"></script>
+        {% include 'header.html' %}
+<h1>Hello, {{ user.get_username }}</h1>
+        {% for i in blogs %}
+         <div class="blog">
+            <div style="display: inline"><h4 style="display: inline-block">{{ i.title }} </h4> <p  style="color: rgb(200, 20, 20); display: inline-block">@{{ i.author }}</p></div>
+             <button onclick="redirect('/view?id={{ i.id }}')">View More</button>
+             </div><br><br>
+        {% endfor %}
+
+    </div>
+    </div>
+</body>
+</html>

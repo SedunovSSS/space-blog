@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    {% include 'links.html' %}
+    <link rel="stylesheet" href="/static/css/view.css">
+</head>
+<body>
+<div id="outer">
+    <div id="inner_default" >
+        <script src="/static/js/redirects.js"></script>
+        {% include 'header.html' %}
+         <div class="view">
+             <div style="display: inline"><h1 style="display: inline-block; margin-right: 50px;">{{ blog.title }} </h1>  <h2  style="color: rgb(200, 20, 20); display: inline-block">@{{ blog.author }}</h2></div>
+             <p>{{ blog.text }}</p>
+         </div>
+    </div>
+    </div>
+</body>
+</html>

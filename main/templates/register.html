@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'links.html' %}
+    <title>Registration Form</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/password.js"></script>
+
+    <div id="outer">
+        <div id="inner_default">
+            {% include 'header.html' %}
+        <div id="inner">
+            <h1>Registration Form</h1>
+           <form method="post" action="/register_backend">
+               {% csrf_token %}
+            <div class="div_input"><img src="/static/images/user.png" class="img"><input type="text" placeholder="Your Login" class="input" name="login" id="login" title="Login"></div><br><br>
+            <div class="div_input"><img src="/static/images/email.png" class="img"><input type="text" placeholder="Your Email" class="input" name="email" id="email" title="Email"></div><br><br>
+            <div class="div_input"><img src="/static/images/password.png" class="img"><input type="password" placeholder="Your Password" class="input" id="passw1" name="passw1" title="Password"></div><br><br>
+            <label class="lbl"><input type="checkbox" class="apavolku-galocksed">Show Password</label><br>
+            <button type="submit" class="btn">Register</button><br>
+           </form>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

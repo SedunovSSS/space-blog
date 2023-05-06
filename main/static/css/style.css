@@ -1,0 +1,161 @@
+@media screen{
+#outer { 
+    width: screen width - 40; 
+}
+#inner { 
+    text-align: center;
+    width: 400px; margin: 1% auto;
+    border: 5px solid rgb(247, 0, 255); 
+    color: white;
+    background: rgba(128,0,255, 0.45);
+    animation: anim;
+    animation-duration: 2.4s;
+    animation-iteration-count: infinite;
+    font-weight: bold;
+    }
+    #inner_default {
+    text-align: center;
+    width: 90%; margin: 2% auto;
+    color: white;
+    background: rgba(255,255,255, 0);
+    font-weight: bold;
+    }
+}
+
+body{
+    background: url(/static/images/bg.jpg);
+}
+.div_input{
+    /* border: 5px solid black; */
+    border-bottom: 5px solid black;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    text-decoration: underline;
+}
+
+.input{
+    width: 256px;
+    height: 48px;
+    background: rgba(0,0,0, 0);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    outline:none;
+}
+
+.input:focus::placeholder{
+    font-size: 12px;
+    text-align: right;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+-webkit-text-fill-color: #FFFFFF;
+-webkit-box-shadow: 0 0 0px 1000px rgba(0,0,0, 0) inset;
+transition: background-color 5000s ease-in-out 0s;
+}
+
+::placeholder{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.btn{
+    width: 320px;
+    height: 48px;
+    background-color: rgb(204, 6, 204);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 20px;
+    margin: 20px auto;
+    border: none;
+}
+.btn:hover{
+    background-color: rgb(179, 6, 179);
+}
+.btn:active{
+    background-color: rgb(151, 3, 151);
+}
+.lbl:hover{
+    color: cyan;
+}
+
+.lnks{
+    color: cyan;
+    text-decoration: none;
+}
+.lnks:hover{
+    color: lime;
+}
+.img{
+    width: 30px;
+    height: 30px;
+    margin: auto 10px;
+}
+
+@keyframes anim {
+    from{
+        border: 5px solid rgb(247, 0, 255); 
+    }
+    15%{
+        border: 5px solid red; 
+    }
+    30%{
+        
+        border: 5px solid orange; 
+    }
+    45%{
+        
+        border: 5px solid yellow; 
+    }
+    60%{
+        
+        border: 5px solid lime; 
+    }
+    75%{
+        
+        border: 5px solid cyan; 
+    }
+    90%{
+        
+        border: 5px solid rgb(0, 110, 255); 
+    }
+    to{
+        border: 5px solid rgb(247, 0, 255); 
+    }
+}
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+::-webkit-scrollbar-track {
+  background: white;
+}
+::-webkit-scrollbar-thumb {
+  background: orange;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: darkorange;
+}
+.div_input textarea{
+width: 256px;
+    background: rgba(0,0,0, 0);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    outline:none;
+height: 200px;
+resize: none;
+}

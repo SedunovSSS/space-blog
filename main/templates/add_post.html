@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'links.html' %}
+    <title>Add</title>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner_default">{% include 'header.html' %}
+        <div id="inner">
+            <h1>Add Post</h1>
+           <form method="post" action="/add_backend">
+               {% csrf_token %}
+            <div class="div_input"><input type="text" placeholder="Write Title" class="input" name="title" id="title" title="Login"></div><br><br>
+               <div class="div_input"><textarea placeholder="Write Text" id="text" name="text" title="Text"></textarea></div><br><br>
+            <button type="submit" class="btn">Add</button><br>
+           </form>
+        </div>
+            </div>
+    </div>
+</body>
+</html>
